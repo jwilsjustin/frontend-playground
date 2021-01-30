@@ -1,0 +1,21 @@
+{
+  "name": "parcel-playground",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "uncache": "rm -rf .parcel-cache",
+    "up": "yarn parcel src/index.html",
+    "build": "yarn parcel build --no-source-maps --no-minify --no-content-hash src/index.html"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "dependencies": {
+    "alpinejs": "^2.8.0",
+    "autoprefixer": "^10.2.3",
+    "parcel": "^2.0.0-nightly.554",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.2"
+  }
+}

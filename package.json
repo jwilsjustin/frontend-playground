@@ -5,11 +5,9 @@
   "scripts": {
     "uncache": "rm -rf .parcel-cache",
     "up": "yarn parcel src/index.html",
-    "build": "yarn parcel build --no-source-maps --no-minify --no-content-hash src/index.html"
+    "build": "yarn parcel build --no-scope-hoist --no-source-maps --no-minify --no-content-hash src/index.html"
   },
-  "engines": {
-    "node": ">=12"
-  },
+  "app": "dist/index.html",
   "dependencies": {
     "alpinejs": "^2.8.0",
     "autoprefixer": "^10.2.3",

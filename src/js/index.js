@@ -1,1 +1,3 @@
-import 'alpinejs'
+import('alpinejs').then(() => {
+  console.table('alpinejs version:', Alpine.version)
+})

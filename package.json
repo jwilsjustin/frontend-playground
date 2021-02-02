@@ -5,7 +5,7 @@
   "scripts": {
     "uncache": "rm -rf .parcel-cache",
     "up": "yarn parcel src/index.html",
-    "build": "yarn parcel build --no-scope-hoist --no-source-maps --no-minify --no-content-hash src/index.html"
+    "build": "yarn parcel build --no-scope-hoist --no-source-maps --no-minify src/index.html"
   },
   "app": "dist/index.html",
   "dependencies": {

@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "scripts": {
     "uncache": "rm -rf .parcel-cache",
-    "up": "yarn parcel src/index.html",
-    "build": "yarn parcel build --no-scope-hoist --no-source-maps --no-minify src/index.html"
+    "up": "yarn parcel src/*.html",
+    "build": "yarn parcel build --no-scope-hoist --no-source-maps --no-minify src/*.html"
   },
   "app": "dist/index.html",
   "dependencies": {

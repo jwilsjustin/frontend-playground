@@ -1,0 +1,41 @@
+<html>
+<head>
+  <title>frontend-playground</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="./css/index.css">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+<body class="antialiased font-sans bg-gray-100">
+  <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-10">
+    <div class="flex flex-col">
+      <div x-data="{ open: false, items: ['uno', 'dos', 'tres'] }" class="p-20 bg-white shadow sm:rounded-sm">
+        <button x-on:click="open = !open" class="bg-gradient-to-br from-green-500 to-green-700 text-white px-2 rounded-md border-b border-green-700">
+          Click me
+        </button>
+        <p x-show.transition.duration.200ms="open">
+          Hello
+        </p>
+
+        <label class="block">
+          <input type="checkbox" x-bind:checked="open" />
+          Check me out.
+        </label>
+
+        <label x-data="{ age: null }">
+          Age <span x-show="age">(You are <span x-text="age"></span> year(s) old)</span>
+          <br>
+          <input type="number" x-model.number="age" class="p-2 border rounded-sm" />
+        </label>
+
+        <template x-for="(item, index) in items" :key="index">
+          <div x-text="item"></div>
+        </template>
+
+        <div x-data>
+          <button @click="$el.innerHTML = 'You clicked me!'">Should you click me?</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

@@ -3,12 +3,14 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
+    "build": "yarn parcel build --no-scope-hoist --no-source-maps --no-minify src/*.html",
+    "tidy": "rm -rf .parcel-cache && rm -rf dist",
     "uncache": "rm -rf .parcel-cache",
-    "up": "yarn parcel src/*.html",
-    "build": "yarn parcel build --no-scope-hoist --no-source-maps --no-minify src/*.html"
+    "up": "yarn parcel src/*.html"
   },
   "app": "dist/index.html",
   "dependencies": {
+    "@tailwindcss/forms": "^0.2.1",
     "alpinejs": "^2.8.0",
     "autoprefixer": "^10.2.3",
     "parcel": "^2.0.0-nightly.554",

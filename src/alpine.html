@@ -6,11 +6,11 @@
   <link rel="stylesheet" type="text/css" href="./css/index.css">
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
-<body class="antialiased font-sans bg-gray-100">
-  <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-10">
+<body class="font-sans antialiased bg-gray-100">
+  <div class="mx-auto mt-10 max-w-7xl sm:px-6 lg:px-8">
     <div class="flex flex-col">
       <div x-data="{ open: false, items: ['uno', 'dos', 'tres'] }" class="p-20 bg-white shadow sm:rounded-sm">
-        <button x-on:click="open = !open" class="bg-gradient-to-br from-green-500 to-green-700 text-white px-2 rounded-md border-b border-green-700">
+        <button x-on:click="open = !open" class="px-2 text-white border-b border-green-700 rounded-md bg-gradient-to-br from-green-500 to-green-700">
           Click me
         </button>
         <p x-show.transition.duration.200ms="open">
